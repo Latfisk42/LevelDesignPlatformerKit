@@ -258,6 +258,24 @@ curve = SubResource("Curve3D_fxxnc")
 object_to_move = NodePath("../spike-block-wide5")
 ping_pong = true
 
+[node name="platform-ramp2" parent="World" instance=ExtResource("21_p0bs3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9308, 3.18961, -3.80797)
+
+[node name="cube" parent="World" instance=ExtResource("22_axkhg")]
+transform = Transform3D(10.0641, 0, 0, 0, 10.0641, 0, 0, 0, 10.0641, -18.4251, -0.598772, -10.1313)
+
+[node name="cube2" parent="World" instance=ExtResource("22_axkhg")]
+transform = Transform3D(10.0641, 0, 0, 0, 10.0641, 0, 0, 0, 10.0641, -18.4154, 5.29301, -10.0855)
+
+[node name="cube5" parent="World" instance=ExtResource("22_axkhg")]
+transform = Transform3D(6.03763, 0, 0, 0, 7.75827, 0, 0, 0, 10.0641, -18.4154, 10.9986, -11.1404)
+
+[node name="cube3" parent="World" instance=ExtResource("22_axkhg")]
+transform = Transform3D(0.0651403, -0.16235, -2.76842, 1.66646, 6.71238, 0, 2.11753, -5.27754, 0.0851633, -12.7538, 7.4372, -3.65409)
+
+[node name="cube4" parent="World" instance=ExtResource("22_axkhg")]
+transform = Transform3D(0.0651403, -0.16235, -2.76842, 2.25976, 4.6545, 0.0274339, 1.46783, -7.1585, 0.0806236, -24.2051, 9.11881, -3.1373)
+
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
 shadow_enabled = true
@@ -381,24 +399,6 @@ label_settings = SubResource("LabelSettings_v6r7m")
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="platform-ramp2" parent="." instance=ExtResource("21_p0bs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9431, 3.20138, -3.7783)
-
-[node name="cube" parent="." instance=ExtResource("22_axkhg")]
-transform = Transform3D(10.0641, 0, 0, 0, 10.0641, 0, 0, 0, 10.0641, -18.4374, -0.587, -10.1016)
-
-[node name="cube2" parent="." instance=ExtResource("22_axkhg")]
-transform = Transform3D(10.0641, 0, 0, 0, 10.0641, 0, 0, 0, 10.0641, -18.4277, 5.30479, -10.0558)
-
-[node name="cube5" parent="." instance=ExtResource("22_axkhg")]
-transform = Transform3D(6.03763, 0, 0, 0, 7.75827, 0, 0, 0, 10.0641, -18.4277, 11.0104, -11.1107)
-
-[node name="cube3" parent="." instance=ExtResource("22_axkhg")]
-transform = Transform3D(0.0651403, -0.16235, -2.76842, 1.66646, 6.71238, 0, 2.11753, -5.27754, 0.0851633, -12.7661, 7.44897, -3.62442)
-
-[node name="cube4" parent="." instance=ExtResource("22_axkhg")]
-transform = Transform3D(0.0651403, -0.16235, -2.76842, 2.25976, 4.6545, 0.0274339, 1.46783, -7.1585, 0.0806236, -24.2175, 9.13058, -3.10763)
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]
