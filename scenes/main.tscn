@@ -65,6 +65,7 @@ shadow_color = Color(0, 0, 0, 0.376471)
 shadow_offset = Vector2(2, 2)
 
 [node name="Main" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0418818, -0.029549, -0.0516303)
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 unique_name_in_owner = true
@@ -97,11 +98,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.262015, 0, 2.75884)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1569, 0, 3.44204)
 
 [node name="moving_object_path2" parent="World" node_paths=PackedStringArray("object_to_move") instance=ExtResource("17_k6tf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0418818, 0.029549, 0.0516303)
 curve = SubResource("Curve3D_v2wjm")
 object_to_move = NodePath("../platform-moving2")
 ping_pong = true
 
 [node name="moving_object_path" parent="World" node_paths=PackedStringArray("object_to_move") instance=ExtResource("17_k6tf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0418818, 0.029549, 0.0516303)
 curve = SubResource("Curve3D_5n82a")
 object_to_move = NodePath("../platform-moving")
 
@@ -128,6 +131,7 @@ target = NodePath("../moving_object_path")
 transform = Transform3D(-0.0183078, -7.59716e-09, 0.999833, -8.04244e-10, 1, 7.58371e-09, -0.999833, -6.65266e-10, -0.0183078, -21.9722, 2.32365, -1.96745)
 
 [node name="player_kill_volume" parent="World" instance=ExtResource("4_mddkv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0418818, -9.97045, 0.0516303)
 
 [node name="checkpoint" parent="World" instance=ExtResource("14_iy7eg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.98404, 1.5, -2.0873)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuhw4o7d8ofv4"]
+
+[ext_resource type="PackedScene" uid="uid://fqfc0dtl2xlc" path="res://models/core_models/platform-grass-large-round.glb" id="1_pobyf"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_w3h03"]
+
+[node name="new_platform-grass-large-round" instance=ExtResource("1_pobyf")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(5, 0, 0, 0, 0.2, 0, 0, 0, 5, 0, 0.315041, 0)
+shape = SubResource("CylinderShape3D_w3h03")
