@@ -128,7 +128,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.67271, 1.5366, -2.23752)
 target = NodePath("../moving_object_path")
 
 [node name="door" parent="World" instance=ExtResource("16_0pfo5")]
-transform = Transform3D(-0.0183078, -7.59716e-09, 0.999833, -8.04244e-10, 1, 7.58371e-09, -0.999833, -6.65266e-10, -0.0183078, -21.9722, 2.32365, -1.96745)
+transform = Transform3D(-0.0183078, -7.59716e-09, 0.999833, -8.04244e-10, 1, 7.58371e-09, -0.999833, -6.65266e-10, -0.0183078, -21.9682, 2.32365, -1.96722)
 
 [node name="player_kill_volume" parent="World" instance=ExtResource("4_mddkv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0418818, -9.97045, 0.0516303)
