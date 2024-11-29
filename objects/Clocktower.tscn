@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cptxaenxkolr0"]
+
+[ext_resource type="PackedScene" uid="uid://gqufwiffi8ay" path="res://models/prototyping/models/shape-hollow-hexagon.glb" id="1_t5y33"]
+[ext_resource type="PackedScene" uid="uid://b7w3bwm7iuk8c" path="res://models/props/tree-pine-snow-small.glb" id="2_xilpx"]
+[ext_resource type="PackedScene" uid="uid://wkgij5gtmeky" path="res://models/props/coin-silver.glb" id="3_ss7jt"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="shape-hollow-hexagon2" parent="." instance=ExtResource("1_t5y33")]
+transform = Transform3D(5, 0, 0, 0, 5.874, 0, 0, 0, 5.048, 0.00640538, 0, -0.0278234)
+
+[node name="tree-pine-snow-small2" parent="shape-hollow-hexagon2" instance=ExtResource("2_xilpx")]
+transform = Transform3D(1.62765, 0, 0, 0, 0.680305, 0, 0, 0, 1.57383, -0.00734216, 0.499568, -0.000738326)
+
+[node name="coin-silver2" parent="shape-hollow-hexagon2" instance=ExtResource("3_ss7jt")]
+transform = Transform3D(3.3717, 0, 0, 0, -1.39924e-07, -0.8972, 0, 3.20108, -3.92178e-08, 0, 0.817, -0.639)
