@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://xi66psufwrjg"]
+
+[ext_resource type="PackedScene" uid="uid://d2ojc014tl3tt" path="res://models/props/fence-low-corner-curved.glb" id="1_msrhi"]
+[ext_resource type="Texture2D" uid="uid://be614e8getrol" path="res://models/props/saw.png" id="2_3nurb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jt465"]
+albedo_texture = ExtResource("2_3nurb")
+metallic = 1.0
+
+[node name="fence-low-corner-curved2" instance=ExtResource("1_msrhi")]
+
+[node name="fence-low-corner-curved" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_jt465")

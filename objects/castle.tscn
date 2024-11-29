@@ -1,0 +1,218 @@
+[gd_scene load_steps=15 format=3 uid="uid://bu7wixhkajkmd"]
+
+[ext_resource type="PackedScene" uid="uid://ddtf78lrj7c73" path="res://models/prototyping/models/shape-cube-rounded.glb" id="1_jn4jl"]
+[ext_resource type="PackedScene" uid="uid://c506v386kacfh" path="res://models/prototyping/models/shape-cylinder-detailed.glb" id="2_olyrb"]
+[ext_resource type="PackedScene" uid="uid://c0n2315wnksre" path="res://models/prototyping/models/shape-cube-half.glb" id="3_f2vaq"]
+[ext_resource type="PackedScene" uid="uid://ctsyh8fjntx7y" path="res://models/props/door-rotate-large.glb" id="4_33aca"]
+[ext_resource type="PackedScene" uid="uid://ca3x0hnr25xhm" path="res://models/props/fence-straight.glb" id="5_e5wr2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hx55v"]
+size = Vector3(1, 1.3927, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1t2eh"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_s26fs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6dtpb"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c2okp"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_57dlg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5d4xs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_btd6y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rxf2d"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="shape-cube-rounded2" parent="." instance=ExtResource("1_jn4jl")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0135648, 0, -0.16417)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-cube-rounded2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-cube-rounded2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19635, 0)
+shape = SubResource("BoxShape3D_hx55v")
+
+[node name="shape-cylinder-detailed4" parent="." instance=ExtResource("2_olyrb")]
+transform = Transform3D(1, 0, 0, 0, 2.32175, 0, 0, 0, 1, -1, 0, 0.582)
+
+[node name="shape-cube-half3" parent="shape-cylinder-detailed4" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.104811, 0.000443667, -0.0393878, -0.000151853, 0.372696, 4.41703e-05, 0.202819, 4.97723e-05, 0.0203545, -0.412583, 0.866187, 0.195012)
+
+[node name="shape-cube-half11" parent="shape-cylinder-detailed4" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.0168639, 0, -0.0445886, 0, 0.372697, 0, 0.170703, 0, -0.00440495, -0.444761, 0.86133, -0.0380601)
+
+[node name="shape-cube-half4" parent="shape-cylinder-detailed4" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.205048, 0, -0.0194942, 0, 0.372697, 0, 0.100381, 0, 0.0398207, -0.201024, 0.866187, 0.408161)
+
+[node name="shape-cube-half5" parent="shape-cylinder-detailed4" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.223363, 0, 0.00917035, 0, 0.372697, 0, -0.0472207, 0, 0.0433776, 0.0907888, 0.866187, 0.452461)
+
+[node name="shape-cube-half6" parent="shape-cylinder-detailed4" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.160427, 0, 0.0315447, 0, 0.372697, 0, -0.162433, 0, 0.0311551, 0.329368, 0.866187, 0.32146)
+
+[node name="shape-cube-half7" parent="shape-cylinder-detailed4" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.134646, 0, 0.0358046, 0, 0.372697, 0, -0.184368, 0, -0.0261484, 0.382449, 0.866187, -0.246607)
+
+[node name="shape-cube-half8" parent="shape-cylinder-detailed4" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.217889, 0, 0.0132362, 0, 0.372697, 0, -0.068157, 0, -0.0423144, 0.141039, 0.866187, -0.425244)
+
+[node name="shape-cube-half9" parent="shape-cylinder-detailed4" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.213631, 0, -0.0156363, 0, 0.372697, 0, 0.0805157, 0, -0.0414875, -0.154117, 0.866187, -0.424822)
+
+[node name="shape-cube-half10" parent="shape-cylinder-detailed4" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.133966, 0, -0.0359006, 0, 0.372697, 0, 0.184863, 0, -0.0260164, -0.370095, 0.866187, -0.259188)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-cylinder-detailed4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-cylinder-detailed4/StaticBody3D"]
+shape = SubResource("CylinderShape3D_1t2eh")
+
+[node name="shape-cylinder-detailed5" parent="." instance=ExtResource("2_olyrb")]
+transform = Transform3D(-0.99969, 0, -0.0248859, 0, 2.32175, 0, 0.0248859, 0, -0.99969, 1.00952, 0, 0.587183)
+
+[node name="shape-cube-half3" parent="shape-cylinder-detailed5" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.105159, 0, -0.0393528, 0, 0.372697, 0, 0.202639, 0, 0.0204221, -0.412583, 0.866187, 0.195012)
+
+[node name="shape-cube-half11" parent="shape-cylinder-detailed5" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.0168639, 0, -0.0445886, 0, 0.372697, 0, 0.170703, 0, -0.00440495, -0.444761, 0.86133, -0.0380601)
+
+[node name="shape-cube-half4" parent="shape-cylinder-detailed5" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.205048, 0, -0.0194942, 0, 0.372697, 0, 0.100381, 0, 0.0398207, -0.201024, 0.866187, 0.408161)
+
+[node name="shape-cube-half5" parent="shape-cylinder-detailed5" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.223363, 0, 0.00917035, 0, 0.372697, 0, -0.0472207, 0, 0.0433776, 0.0907888, 0.866187, 0.452461)
+
+[node name="shape-cube-half6" parent="shape-cylinder-detailed5" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.160427, 0, 0.0315447, 0, 0.372697, 0, -0.162433, 0, 0.0311551, 0.329368, 0.866187, 0.32146)
+
+[node name="shape-cube-half7" parent="shape-cylinder-detailed5" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.134646, 0, 0.0358046, 0, 0.372697, 0, -0.184368, 0, -0.0261484, 0.382449, 0.866187, -0.246607)
+
+[node name="shape-cube-half8" parent="shape-cylinder-detailed5" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.217889, 0, 0.0132362, 0, 0.372697, 0, -0.068157, 0, -0.0423144, 0.141039, 0.866187, -0.425244)
+
+[node name="shape-cube-half9" parent="shape-cylinder-detailed5" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.213631, 0, -0.0156363, 0, 0.372697, 0, 0.0805157, 0, -0.0414875, -0.154117, 0.866187, -0.424822)
+
+[node name="shape-cube-half10" parent="shape-cylinder-detailed5" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.133966, 0, -0.0359006, 0, 0.372697, 0, 0.184863, 0, -0.0260164, -0.370095, 0.866187, -0.259188)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-cylinder-detailed5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-cylinder-detailed5/StaticBody3D"]
+shape = SubResource("CylinderShape3D_s26fs")
+
+[node name="shape-cube-half2" parent="." instance=ExtResource("3_f2vaq")]
+transform = Transform3D(1.33574, 0, 0, 0, 1, 0, 0, 0, 0.149342, -0.117353, 1.82249, 0.574923)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-cube-half2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-cube-half2/StaticBody3D"]
+shape = SubResource("BoxShape3D_6dtpb")
+
+[node name="shape-cylinder-detailed6" parent="." instance=ExtResource("2_olyrb")]
+transform = Transform3D(-0.999896, 0, 0.0144509, 0, 2.32175, 0, -0.0144509, 0, -0.999896, 0.969102, 0, -1.05083)
+
+[node name="shape-cube-half3" parent="shape-cylinder-detailed6" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.105159, 0, -0.0393528, 0, 0.372697, 0, 0.202639, 0, 0.0204221, -0.412583, 0.866187, 0.195012)
+
+[node name="shape-cube-half11" parent="shape-cylinder-detailed6" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.0168639, 0, -0.0445886, 0, 0.372697, 0, 0.170703, 0, -0.00440495, -0.444761, 0.86133, -0.0380601)
+
+[node name="shape-cube-half4" parent="shape-cylinder-detailed6" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.205048, 0, -0.0194942, 0, 0.372697, 0, 0.100381, 0, 0.0398207, -0.201024, 0.866187, 0.408161)
+
+[node name="shape-cube-half5" parent="shape-cylinder-detailed6" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.223363, 0, 0.00917035, 0, 0.372697, 0, -0.0472207, 0, 0.0433776, 0.0907888, 0.866187, 0.452461)
+
+[node name="shape-cube-half6" parent="shape-cylinder-detailed6" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.160427, 0, 0.0315447, 0, 0.372697, 0, -0.162433, 0, 0.0311551, 0.329368, 0.866187, 0.32146)
+
+[node name="shape-cube-half7" parent="shape-cylinder-detailed6" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.134646, 0, 0.0358046, 0, 0.372697, 0, -0.184368, 0, -0.0261484, 0.382449, 0.866187, -0.246607)
+
+[node name="shape-cube-half8" parent="shape-cylinder-detailed6" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.217889, 0, 0.0132362, 0, 0.372697, 0, -0.068157, 0, -0.0423144, 0.141039, 0.866187, -0.425244)
+
+[node name="shape-cube-half9" parent="shape-cylinder-detailed6" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.213631, 0, -0.0156363, 0, 0.372697, 0, 0.0805157, 0, -0.0414875, -0.154117, 0.866187, -0.424822)
+
+[node name="shape-cube-half10" parent="shape-cylinder-detailed6" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.133966, 0, -0.0359006, 0, 0.372697, 0, 0.184863, 0, -0.0260164, -0.370095, 0.866187, -0.259188)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-cylinder-detailed6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-cylinder-detailed6/StaticBody3D"]
+shape = SubResource("CylinderShape3D_c2okp")
+
+[node name="shape-cylinder-detailed7" parent="." instance=ExtResource("2_olyrb")]
+transform = Transform3D(0.999945, 0, 0.0104368, 0, 2.32175, 0, -0.0104368, 0, 0.999945, -1.04014, 0, -1.08505)
+
+[node name="shape-cube-half3" parent="shape-cylinder-detailed7" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.105159, 0, -0.0393528, 0, 0.372697, 0, 0.202639, 0, 0.0204221, -0.412583, 0.866187, 0.195012)
+
+[node name="shape-cube-half11" parent="shape-cylinder-detailed7" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.0168639, 0, -0.0445886, 0, 0.372697, 0, 0.170703, 0, -0.00440495, -0.444761, 0.86133, -0.0380601)
+
+[node name="shape-cube-half4" parent="shape-cylinder-detailed7" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.205048, 0, -0.0194942, 0, 0.372697, 0, 0.100381, 0, 0.0398207, -0.201024, 0.866187, 0.408161)
+
+[node name="shape-cube-half5" parent="shape-cylinder-detailed7" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.223363, 0, 0.00917035, 0, 0.372697, 0, -0.0472207, 0, 0.0433776, 0.0907888, 0.866187, 0.452461)
+
+[node name="shape-cube-half6" parent="shape-cylinder-detailed7" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.160427, 0, 0.0315447, 0, 0.372697, 0, -0.162433, 0, 0.0311551, 0.329368, 0.866187, 0.32146)
+
+[node name="shape-cube-half7" parent="shape-cylinder-detailed7" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.134646, 0, 0.0358046, 0, 0.372697, 0, -0.184368, 0, -0.0261484, 0.382449, 0.866187, -0.246607)
+
+[node name="shape-cube-half8" parent="shape-cylinder-detailed7" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.217889, 0, 0.0132362, 0, 0.372697, 0, -0.068157, 0, -0.0423144, 0.141039, 0.866187, -0.425244)
+
+[node name="shape-cube-half9" parent="shape-cylinder-detailed7" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.213631, 0, -0.0156363, 0, 0.372697, 0, 0.0805157, 0, -0.0414875, -0.154117, 0.866187, -0.424822)
+
+[node name="shape-cube-half10" parent="shape-cylinder-detailed7" instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-0.133966, 0, -0.0359006, 0, 0.372697, 0, 0.184863, 0, -0.0260164, -0.370095, 0.866187, -0.259188)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-cylinder-detailed7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-cylinder-detailed7/StaticBody3D"]
+shape = SubResource("CylinderShape3D_57dlg")
+
+[node name="shape-cube-half4" parent="." instance=ExtResource("3_f2vaq")]
+transform = Transform3D(-1.3356, 0, 0.00215813, 0, 1, 0, -0.0193026, 0, -0.149326, 0.0864449, 1.82249, -1.05651)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-cube-half4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-cube-half4/StaticBody3D"]
+shape = SubResource("BoxShape3D_5d4xs")
+
+[node name="shape-cube-half3" parent="." instance=ExtResource("3_f2vaq")]
+transform = Transform3D(0.927435, 0, 0, 0, 0.244017, 0, 0, 0, 1, -0.0466868, 0, 1.06749)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-cube-half3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-cube-half3/StaticBody3D"]
+shape = SubResource("BoxShape3D_btd6y")
+
+[node name="door-rotate-large2" parent="." instance=ExtResource("4_33aca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0449891, 0.0483737, 0.769051)
+
+[node name="fence-straight2" parent="." instance=ExtResource("5_e5wr2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0337389, 0, 1.13232)
+
+[node name="fence-straight3" parent="." instance=ExtResource("5_e5wr2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0336082, -0.00592208, 1.13685)
+
+[node name="shape-cube-half5" parent="." instance=ExtResource("3_f2vaq")]
+transform = Transform3D(1.80168, 0, 0, 0, 0.999999, 0, 0, 0, 1.50471, 0.0549138, 1.58636, -0.239317)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-cube-half5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-cube-half5/StaticBody3D"]
+shape = SubResource("BoxShape3D_rxf2d")

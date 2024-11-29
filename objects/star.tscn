@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx3px81eke58f"]
+
+[ext_resource type="PackedScene" uid="uid://day542mhkw6j7" path="res://models/props/saw.glb" id="1_s6wws"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ielej"]
+albedo_color = Color(0.929412, 0.713726, 0, 1)
+metallic = 1.0
+
+[node name="saw2" instance=ExtResource("1_s6wws")]
+
+[node name="saw" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00451636, -0.00411272, 0.00140727)
+surface_material_override/0 = SubResource("StandardMaterial3D_ielej")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmbj2rac871rk"]
+
+[ext_resource type="PackedScene" uid="uid://b8d1oe5olis7n" path="res://models/props/stones.glb" id="1_1ow7p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ey00v"]
+albedo_color = Color(0.1705, 0.31, 0, 1)
+metallic = 1.0
+
+[node name="stones2" instance=ExtResource("1_1ow7p")]
+
+[node name="stones" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ey00v")

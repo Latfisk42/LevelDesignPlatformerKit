@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqli1bip3n34c"]
+
+[ext_resource type="PackedScene" uid="uid://b8d1oe5olis7n" path="res://models/props/stones.glb" id="1_gyg6q"]
+
+[node name="stones2" instance=ExtResource("1_gyg6q")]

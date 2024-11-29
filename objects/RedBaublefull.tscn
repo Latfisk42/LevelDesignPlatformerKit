@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://clvgp44x2kd08"]
+
+[ext_resource type="PackedScene" uid="uid://dr6qsubttrw5k" path="res://objects/Rebaublepic.tscn" id="1_0cnpr"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104898, 0, 0)
+
+[node name="coin5" parent="." instance=ExtResource("1_0cnpr")]
+transform = Transform3D(3.35336, 0, 3.70877, 0, 5, 0, -3.70877, 0, 3.35336, 0, 0, 0)
+
+[node name="coin6" parent="." instance=ExtResource("1_0cnpr")]
+transform = Transform3D(-0.291479, 0, 4.9915, 0, 5, 0, -4.9915, 0, -0.291479, 0, 0, 0)
+
+[node name="coin7" parent="." instance=ExtResource("1_0cnpr")]
+transform = Transform3D(-3.10936, 0, 3.91559, 0, 5, 0, -3.91559, 0, -3.10936, 0, 0, 0)
+
+[node name="coin8" parent="." instance=ExtResource("1_0cnpr")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
