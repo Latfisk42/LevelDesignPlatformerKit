@@ -1,11 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr6qsubttrw5k"]
+[gd_scene load_steps=2 format=3 uid="uid://dr6qsubttrw5k"]
 
 [ext_resource type="PackedScene" uid="uid://e64a4omgpcs" path="res://models/core_models/coin.glb" id="1_kotw5"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_cj01c"]
-albedo_color = Color(0.635294, 0, 0, 1)
-
 [node name="coin" instance=ExtResource("1_kotw5")]
-
-[node name="coin2" parent="." index="0"]
-surface_material_override/0 = SubResource("ORMMaterial3D_cj01c")

@@ -1,0 +1,81 @@
+[gd_scene load_steps=10 format=4 uid="uid://owcshstqw58v"]
+
+[ext_resource type="PackedScene" uid="uid://dvwlti6x17wjs" path="res://models/prototyping/models/shape-cube.glb" id="1_e1x8w"]
+[ext_resource type="Texture2D" uid="uid://bvj25ii6y01ic" path="res://models/prototyping/models/Textures/colormap.png" id="2_113uu"]
+[ext_resource type="PackedScene" uid="uid://4jgxgid0t073" path="res://objects/new_red_door_large_open_2.tscn" id="3_2sohn"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_0wgb0"]
+albedo_color = Color(0.117647, 0.709804, 0.305882, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cqhfk"]
+size = Vector3(1, 0.997314, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p28am"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("2_113uu")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1llqm"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABAAAAAIAAgAFAAQABAAGAAEAAQAAAAQABwAGAAQABAAFAAcABwADAAEAAQAGAAcAAgADAAcABwAFAAIA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAA//8AAAAA/////wAAAAAAAAAA//8AAAAA/////wAA//8AAP//AAD///////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pq61n"]
+resource_name = "shape-cube_shape-cube"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("/3eY+f93mPn/d2XG/3dlxv93mPn/d2XG/3eY+f93Zcb/d5j5/3eY+f93mPn/d5j5/3eY+f93mPn/d2XG/3dlxv93Zcb/d5j5/3dlxv93mPn/d2XG/3dlxv93Zcb/d2XG"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEQATABIAFgAUABUAFQAXABYA"),
+"material": SubResource("StandardMaterial3D_p28am"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/vwAA//8AAP+/AAAAAP///78AAP//////v///AAD///+///8AAAAA/78AAAAA////vwAAAAAAAP+///8AAP//AIAAAAAA//8AgP///////wCAAAD/////AID/////AAD/v///AAAAAP+//////////7///wAA////v/////8AAP////////////8AAP//AAD//wAA/////////3////9/////f////3////9/////f////3////9///8AAP9/AAD/fwAA/38AAP9//3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1llqm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pywhi"]
+albedo_color = Color(1, 0.0745098, 0, 1)
+
+[node name="shape-cube2" instance=ExtResource("1_e1x8w")]
+
+[node name="shape-cube" parent="." index="0"]
+surface_material_override/0 = SubResource("ORMMaterial3D_0wgb0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-cube/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.498901, 0)
+shape = SubResource("BoxShape3D_cqhfk")
+
+[node name="shape-cube2" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(0.161912, 0, 0, 0, 1.06631, 0, 0, 0, 1.05049, 0, -0.0503093, 0)
+mesh = SubResource("ArrayMesh_pq61n")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_pywhi")
+
+[node name="shape-cube3" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(-7.07739e-09, 0, 1.05049, 0, 1.06631, 0, -0.161912, 0, -4.59185e-08, 0, -0.0503093, 0)
+mesh = SubResource("ArrayMesh_pq61n")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_pywhi")
+
+[node name="door-large-open4" parent="." index="3" instance=ExtResource("3_2sohn")]
+transform = Transform3D(0.262419, 0.145383, 0, -0.115667, 0.208781, -0.181747, -0.0880764, 0.158979, 0.23868, 0.12575, 0.947881, -0.0100788)
+
+[node name="door-large-open5" parent="." index="4" instance=ExtResource("3_2sohn")]
+transform = Transform3D(-0.262386, -0.145443, -2.62268e-08, -0.115714, 0.208754, 0.181747, -0.0881124, 0.158959, -0.23868, -0.133568, 0.947881, -0.0100788)
