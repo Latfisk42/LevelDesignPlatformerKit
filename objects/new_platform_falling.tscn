@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://devs3cmn6fuan"]
+[gd_scene load_steps=13 format=4 uid="uid://devs3cmn6fuan"]
 
 [ext_resource type="PackedScene" uid="uid://biyd6x403gvny" path="res://models/core_models/platform-falling.glb" id="1_eew0r"]
 [ext_resource type="Script" path="res://objects/platform_falling.gd" id="2_8fhgs"]
 [ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="3_pt7re"]
+[ext_resource type="PackedScene" uid="uid://kxlanit681hg" path="res://models/props/platform.glb" id="4_aygfg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t551e"]
 size = Vector3(2, 0.1, 2)
@@ -117,11 +118,15 @@ shape = SubResource("ConcavePolygonShape3D_4mmvt")
 
 [node name="platform-falling2" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0317395, 0, 0)
+visible = false
 mesh = SubResource("ArrayMesh_6gl6g")
 
 [node name="FallingPlatformAnimationPlayer" type="AnimationPlayer" parent="." index="3"]
 libraries = {
 "": SubResource("AnimationLibrary_mmy7m")
 }
+
+[node name="platform2" parent="." index="4" instance=ExtResource("4_aygfg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]

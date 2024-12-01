@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://qsdlonh8d3dn"]
+
+[ext_resource type="PackedScene" uid="uid://devs3cmn6fuan" path="res://objects/new_platform_falling.tscn" id="1_eka5f"]
+[ext_resource type="PackedScene" uid="uid://clvgp44x2kd08" path="res://objects/RedBaublefull.tscn" id="2_xydnt"]
+
+[node name="new-platform-falling" instance=ExtResource("1_eka5f")]
+
+[node name="platform2" parent="." index="4"]
+visible = false
+
+[node name="Node3D" parent="." index="5" instance=ExtResource("2_xydnt")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, -1.89831, 0)

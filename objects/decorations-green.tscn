@@ -3,10 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://b8d1oe5olis7n" path="res://models/props/stones.glb" id="1_1ow7p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ey00v"]
-albedo_color = Color(0.1705, 0.31, 0, 1)
+albedo_color = Color(0.168627, 0.490196, 0, 1)
 metallic = 1.0
 
 [node name="stones2" instance=ExtResource("1_1ow7p")]
 
 [node name="stones" parent="." index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ey00v")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.226111, 0)
+light_color = Color(1, 1, 0, 1)

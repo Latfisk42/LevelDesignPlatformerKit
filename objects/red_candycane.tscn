@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwntw3n1ak32t"]
+
+[ext_resource type="PackedScene" uid="uid://cdv6xfcjmsrot" path="res://objects/candycane.tscn" id="1_mxqya"]
+[ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="2_h1tcj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rjxru"]
+albedo_color = Color(1, 0, 0, 1)
+albedo_texture = ExtResource("2_h1tcj")
+uv1_scale = Vector3(4.557, 1, 0)
+
+[node name="barrel2" instance=ExtResource("1_mxqya")]
+
+[node name="barrel" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rjxru")
+
+[node name="barrel2" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rjxru")
+
+[node name="barrel3" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rjxru")
+
+[node name="barrel4" parent="." index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rjxru")
+
+[node name="barrel5" parent="." index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rjxru")
+
+[node name="barrel6" parent="." index="5"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rjxru")
