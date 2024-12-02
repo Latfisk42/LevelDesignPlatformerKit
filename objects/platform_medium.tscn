@@ -11,6 +11,7 @@ albedo_color = Color(1, 0, 0, 1)
 albedo_texture = ExtResource("2_ki5da")
 uv1_scale = Vector3(-8.275, -8.275, -8.275)
 uv1_offset = Vector3(0.2, 0, 0)
+distance_fade_mode = 1
 
 [node name="platform-medium" instance=ExtResource("1_ihbp6")]
 
