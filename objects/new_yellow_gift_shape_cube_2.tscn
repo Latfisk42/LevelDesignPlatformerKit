@@ -1,11 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3owgco50qif5"]
+[gd_scene load_steps=5 format=3 uid="uid://b3owgco50qif5"]
 
 [ext_resource type="PackedScene" uid="uid://owcshstqw58v" path="res://objects/new_gift_shape_cube_2.tscn" id="1_g4mk1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72fp4"]
 albedo_color = Color(1, 0.67451, 0.188235, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6g1xx"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr6ny"]
+albedo_color = Color(1, 0, 0, 1)
+
 [node name="shape-cube2" instance=ExtResource("1_g4mk1")]
 
 [node name="shape-cube" parent="." index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_72fp4")
+
+[node name="shape-cube2" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_6g1xx")
+
+[node name="shape-cube3" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fr6ny")

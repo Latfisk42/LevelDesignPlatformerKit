@@ -48,8 +48,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1llqm")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pywhi"]
-albedo_color = Color(1, 0.0745098, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ctxb"]
+albedo_color = Color(1, 0.00999999, 0.00999999, 1)
 
 [node name="shape-cube2" instance=ExtResource("1_e1x8w")]
 
@@ -66,13 +66,13 @@ shape = SubResource("BoxShape3D_cqhfk")
 transform = Transform3D(0.161912, 0, 0, 0, 1.06631, 0, 0, 0, 1.05049, 0, -0.0503093, 0)
 mesh = SubResource("ArrayMesh_pq61n")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_pywhi")
+surface_material_override/0 = SubResource("StandardMaterial3D_1ctxb")
 
 [node name="shape-cube3" type="MeshInstance3D" parent="." index="2"]
 transform = Transform3D(-7.07739e-09, 0, 1.05049, 0, 1.06631, 0, -0.161912, 0, -4.59185e-08, 0, -0.0503093, 0)
 mesh = SubResource("ArrayMesh_pq61n")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_pywhi")
+surface_material_override/0 = SubResource("StandardMaterial3D_1ctxb")
 
 [node name="door-large-open4" parent="." index="3" instance=ExtResource("3_2sohn")]
 transform = Transform3D(0.262419, 0.145383, 0, -0.115667, 0.208781, -0.181747, -0.0880764, 0.158979, 0.23868, 0.12575, 0.947881, -0.0100788)

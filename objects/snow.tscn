@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://co3ua7p5j0m3i"]
+[gd_scene load_steps=4 format=3 uid="uid://co3ua7p5j0m3i"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lwref"]
 emission_shape_scale = Vector3(5, 5, 5)
@@ -9,7 +9,10 @@ scale_min = 0.5
 turbulence_enabled = true
 turbulence_noise_strength = 0.38
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7k3i"]
+
 [sub_resource type="SphereMesh" id="SphereMesh_ajr3h"]
+material = SubResource("StandardMaterial3D_o7k3i")
 radius = 0.025
 height = 0.05
 
