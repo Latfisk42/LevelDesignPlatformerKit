@@ -1,12 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://4jgxgid0t073"]
+[gd_scene load_steps=4 format=3 uid="uid://4jgxgid0t073"]
 
 [ext_resource type="PackedScene" uid="uid://o03cclkqfdvo" path="res://models/props/door-large-open.glb" id="1_xnfte"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtmbv"]
 albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_a6jag"]
-size = Vector3(1, 0.603516, 0.2854)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_n04j0"]
 height = 0.23072
@@ -18,10 +15,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_qtmbv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
-transform = Transform3D(0.989522, 0, 0, 0, 0.989522, 0, 0, 0, 0.989522, 0, 0.282227, 0.00354004)
-shape = SubResource("BoxShape3D_a6jag")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="0"]
 transform = Transform3D(0.989522, 0, 0, 0, -0.0133497, 0.989431, 0, -0.989431, -0.0133497, 0, 0.496725, 0.000811696)
 shape = SubResource("CylinderShape3D_n04j0")

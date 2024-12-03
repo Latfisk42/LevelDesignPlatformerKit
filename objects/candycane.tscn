@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://cdv6xfcjmsrot"]
+[gd_scene load_steps=7 format=4 uid="uid://cdv6xfcjmsrot"]
 
 [ext_resource type="PackedScene" uid="uid://dgwnhphsmk556" path="res://models/props/barrel.glb" id="1_qgws5"]
 [ext_resource type="Texture2D" uid="uid://72ldk18ropuj" path="res://models/props/Textures/colormap.png" id="3_uyets"]
@@ -43,6 +43,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jdkmg")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vqjyi"]
+height = 0.673993
+radius = 0.170544
+
 [node name="barrel2" instance=ExtResource("1_qgws5")]
 
 [node name="barrel" parent="." index="0"]
@@ -72,3 +76,29 @@ skeleton = NodePath("")
 transform = Transform3D(-0.537458, -0.328966, 0.0403485, 0.140462, -1.26321, 0.00662261, 0.0245375, 0.0255821, 0.845865, -1.01052, 2.04752, 0.0307549)
 mesh = SubResource("ArrayMesh_6x7ae")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38195, 0)
+shape = SubResource("CylinderShape3D_vqjyi")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02379, 0)
+shape = SubResource("CylinderShape3D_vqjyi")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="2"]
+transform = Transform3D(0.991296, -0.131651, 0, 0.131651, 0.991296, 0, 0, 0, 1, -0.0367728, 1.65439, 0)
+shape = SubResource("CylinderShape3D_vqjyi")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="3"]
+transform = Transform3D(0.36879, -0.929513, 0, 0.929513, 0.36879, 0, 0, 0, 1, -0.302466, 2.06931, 0.00321662)
+shape = SubResource("CylinderShape3D_vqjyi")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="4"]
+transform = Transform3D(-0.364048, -0.93138, 0, 0.93138, -0.364048, 0, 0, 0, 1, -0.789341, 2.06608, 0.0119104)
+shape = SubResource("CylinderShape3D_vqjyi")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" index="5"]
+transform = Transform3D(-0.954537, -0.298091, 0, 0.298091, -0.954537, 0, 0, 0, 1, -1.06248, 1.7158, 0.0281721)
+shape = SubResource("CylinderShape3D_vqjyi")
