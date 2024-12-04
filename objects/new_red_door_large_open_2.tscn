@@ -18,3 +18,4 @@ surface_material_override/0 = SubResource("StandardMaterial3D_qtmbv")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="0"]
 transform = Transform3D(0.989522, 0, 0, 0, -0.0133497, 0.989431, 0, -0.989431, -0.0133497, 0, 0.496725, 0.000811696)
 shape = SubResource("CylinderShape3D_n04j0")
+disabled = true
