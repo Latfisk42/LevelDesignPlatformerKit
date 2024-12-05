@@ -629,7 +629,10 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -30.19
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -28.2986, -4.88327, -2.95537)
 
 [node name="vehicle5" parent="World" instance=ExtResource("36_wr2am")]
-transform = Transform3D(-30, 0, -4.52987e-06, 0, 30, 0, 4.52987e-06, 0, -30, -52.6215, -6.81769, 79.1532)
+transform = Transform3D(-30, 0, -4.52987e-06, 0, 30, 0, 4.52987e-06, 0, -30, -80.0763, -6.81769, 82.3979)
+
+[node name="vehicle6" parent="World" instance=ExtResource("36_wr2am")]
+transform = Transform3D(29.9811, 0, -1.06582, 0, 30, 0, 1.06582, 0, 29.9811, 58.1423, -6.81769, 130.676)
 
 [node name="vehicle4" parent="World" instance=ExtResource("36_wr2am")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -28.2986, -4.88327, -1.55076)
